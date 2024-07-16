@@ -87,7 +87,7 @@ def plot_lognorm_sigma(data, loc, params, vmin_vmax=None, save=False, fname='log
 
     # колорбар
     plt.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap),
-                ax=(ax2, ax3), orientation='vertical', label=r'$\sigma_{log(y-\^y)},\ [log(mD)]$')
+                ax=(ax2, ax3), orientation='vertical', label=r'$\sigma_{log},\ [log(mD)]$')
 
     if save:
         plt.savefig(f'{fname}.png', dpi = 300,  bbox_inches='tight', transparent=False)
@@ -443,8 +443,8 @@ def plot_error_vs_event_num(evs, errs):
     xx = np.array([0.1, 100])
     plt.plot(xx, poly1d_fn(np.log(xx)), c='r', linestyle=':', linewidth=2)
 
-    ax.set_xlabel('Количество событий')
-    ax.set_ylabel('Ошибка порядка определения')
+    ax.set_xlabel('Number of events in a cell')
+    ax.set_ylabel(r'$\sigma_{log},\ [log(mD)]$')
 
 
 def event_pics_for_gif(ev, params):

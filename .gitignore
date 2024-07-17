@@ -2,6 +2,7 @@
 *.h5
 model states/
 pics/
+data/
 
 
 # Byte-compiled / optimized / DLL files
